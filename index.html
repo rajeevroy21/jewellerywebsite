@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <title>Lilac-Love of jewels</title>
+    <style>
+        .slider-container {
+            position: relative;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .slider-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 500px;
+            width: 1200px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .slider-image.active {
+            opacity: 1;
+        }
+    </style>
+    <link rel="shortcut icon" href="FAVICON.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <div class="header-section">
+        <div class="left-section">
+            <ul class="social-icons">
+                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            </ul>
+            </div>
+            <div class="center-section">
+                <p class="contact-info">Phone: +91 7993084292 | Email: lilacjewelers@gmail.com </p>
+            </div>
+            <div class="right-section">
+                <a href="#" class="login"><b>Login</b></a>
+            </div>
+        </div>
+        <div class="header-top">
+            <div class="logo-section">
+                <img src="images/LOGO/LOGO.png" alt="Unity Foundation">
+            </div>
+            <div class="navigation-section">
+                <nav>
+                    <ul class="main-nav">
+                        <li><a href="#"><b>Home</b></a></li>
+                        <li><a href="#"><b>About</b></a></li>
+                        <li><a href="#"><b>Collections</b></a></li>
+                        <li><a href="#"><b>Our gallery</b></a></li>
+                        <li><a href="#"><b>Contact Us</b></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="search_btn">
+                <a href="#"><i class="ion-ios-search-strong"></i></a>
+                <div class="dropdown_search">
+                    <form action="#">
+                        <input type="text" placeholder="Search Product ....">
+                        <button type="submit"><i class="ion-ios-search-strong"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="first-section">
+        <div class="slider-container">
+            <img src="images/main-section/1st-twice.png" alt="Image 1" class="slider-image active" height="3000px" width="3000px">
+            <img src="images/main-section/3rd-twice.png" alt="Image 3" class="slider-image" height="2000px" width="2000px">
+            <img src="images/main-section/3rd-modified (1).png" alt="Image 3" class="slider-image" height="2000px" width="2000px">
+            <img src="images/main-section/5th-modified.png" alt="Image 3" class="slider-image" height="2000px" width="2000px">
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var images = document.querySelectorAll('.slider-image');
+                var currentImageIndex = 0;
+                function showNextImage() {
+                    images[currentImageIndex].classList.remove('active');
+                    currentImageIndex = (currentImageIndex + 1) % images.length;
+                    images[currentImageIndex].classList.add('active');
+                }
+                function startSlideshow() {
+                    setInterval(showNextImage, 3000); 
+                }
+                startSlideshow();
+            });
+        </script>
+    </section>
+    <section id="collections">
+        <h2>Our Collections</h2>
+        <div class="collection-images">
+            <div class="collection-item">
+                <img src="images/Collections/rings.jpeg" alt="Rings">
+                <div class="collection-description">
+                    <h2>Lilac Specials</h2>
+                    <br>
+                    <p>Rose gold rings</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <img src="images/Collections/bracelets.jpg" alt="Bracelets">
+                <div class="collection-description">
+                    <h2>Bracelet Bliss</h2>
+                    <br>
+                    <p>Exquisite arm candy</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <img src="images/Collections/bangles.jpg" alt="Bangles">
+                <div class="collection-description">
+                    <h2>Bangle Bonanza</h2>
+                    <br>
+                    <p>Statement wrist adornments</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <img src="images/Collections/Earrings-1.png" alt="Earrings">
+                <div class="collection-description">
+                    <h2>Earring Enchantment</h2>
+                    <br>
+                    <p>Magical ear jewels</p>
+                </div>
+            </div>
+            <div class="collection-item">
+                <img src="images/Collections/CHAIN.jpeg" alt="Chains">
+                <div class="collection-description">
+                    <h2>Chain Charisma</h2>
+                    <br>
+                    <p>Irresistible neck treasures</p>
+                </div>
+            </div>
+        </div>
+    </section>   
+    <div class="blog_heading">
+        <h2>Our Blogs</h2>
+    </div>
+    <section id="blog">
+            <div class="blog_box">
+                <div class="blog_img">
+                    <img src="images/Blog/1st.jpg" alt="Post-1">
+                </div>
+                <div class="blog_text">
+                    <span>12 Febraury 2024 / Making</span><br>
+                    <a href="#" class="blog_title">Behind the scenes of making our own jewellery</a>
+                    <br>
+                    <p>Experience the artistry and dedication behind Lilac's signature collection. From initial design concepts to meticulous craftsmanship, each piece is handcrafted with passion and precision. Explore our journey as we transform the finest materials into timeless treasures, celebrating life's most precious moments with elegance and style.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <div class="blog_box">
+                <div class="blog_img">
+                    <img src="images/Blog/2nd.jpeg" alt="Post-1">
+                </div>
+                <div class="blog_text">
+                    <span>3 March 2024 / Day-to-day</span><br>
+                    <a href="#" class="blog_title">Importance of Rose gold jewellery in daily life</a>
+                    <br>
+                    <p>Rose gold jewelry effortlessly adds a touch of elegance and warmth to your everyday attire. Its subtle blush hue complements various skin tones and outfits, making it a versatile choice for any occasion. Whether it's a delicate rose gold necklace that adds a hint of sophistication to your office ensemble or a pair of chic rose gold earrings that elevate your casual look, this timeless metal effortlessly transitions from day to night, adding a touch of glamour to your everyday life.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <div class="blog_box">
+                <div class="blog_img">
+                    <img src="images/Blog/3rd.jpg" alt="Post-1">
+                </div>
+                <div class="blog_text">
+                    <span>24 April 2024 / Cleaning</span><br>
+                    <a href="#" class="blog_title">How to clean/Maintain Our jewellery?</a>
+                    <br>
+                    <p>Maintaining the luster of your rose gold jewelry is essential for preserving its beauty. To clean your pieces, gently scrub them with a soft-bristled brush and mild soapy water, then rinse thoroughly and pat dry with a soft cloth. Avoid harsh chemicals and abrasive materials, as they can damage the delicate surface of rose gold. Regular cleaning and occasional polishing will ensure that your rose gold jewelry retains its radiant shine, allowing you to enjoy its timeless beauty for years to come.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+    </section> 
+    <div class="section_container">
+        <div class="header">
+            <p>TESTIMONIALS</p>
+            <br>
+            <h2>What our clients say about us.</h2>
+        </div>
+        <div class="testimonials_grid">
+            <div class="card">
+                <span><i class="ri-double-quotes-l"></i></span>
+                <p>Incredible craftsmanship and stunning design! I feel like royalty wearing my new jewelry from Lilac jewellers</p>
+                <hr/>
+                <img src="images/Testimonals/1st.jpeg" alt="User">
+                <p class="name">Musfira Fiyaz</p>
+            </div>
+            <div class="card">
+                <span><i class="ri-double-quotes-l"></i></span>
+                <p>Absolutely delighted with my purchase! The attention to detail and quality exceeded my expectations. Lilac has gained a lifelong customer.</p>
+                <hr/>
+                <img src="images/Testimonals/2nd.jpeg" alt="User">
+                <p class="name">Natasha Valeria</p>
+            </div>
+            <div class="card">
+                <span><i class="ri-double-quotes-l"></i></span>
+                <p>Surprised my girlfriend with a stunning necklace from Lilac, and she hasn't stopped smiling since. Thank you for helping me make her day extra special!</p>
+                <hr/>
+                <img src="images/Testimonals/3rd.jpeg" alt="User">
+                <p class="name">David Michael</p>
+            </div>
+        </div>
+        <div class="footer">
+             <h4>Where Elegance Meets Excellence - Perfect Jewelry Destination.</h4>
+             <p>Discover elegance redefined in every piece, where craftsmanship meets sophistication. Elevate your style with our exquisite jewelry, crafted to perfection.</p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-left">
+            <div class="my-account">
+                <h3>My Account</h3>
+                <hr>
+                <br>
+                <ul>
+                    <li><a href="#">Login</a></li>
+                    <br>
+                    <li><a href="#">Orders</a></li>
+                    <br>
+                    <li><a href="#">Cart</a></li>
+                    <br>
+                    <li><a href="#">Logout</a></li>
+                    <br>
+                </ul>
+            </div>
+            <div class="get-help">
+                <h3>Get Help</h3>
+                <hr>
+                <br>
+                <ul>
+                    <li><a href="#">Faq</a></li>
+                    <br>
+                    <li><a href="#">Shipping</a></li>
+                    <br>
+                    <li><a href="#">Return</a></li>
+                    <br>
+                    <li><a href="#">Payment options</a></li>
+                    <br>
+                </ul>
+            </div>
+            <div class="legal">
+                <h3>Legal</h3>
+                <hr>
+                <br>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <br>
+                    <li><a href="#">Terms and conditions</a></li>
+                    <br>
+                    <li><a href="#">Return policy</a></li>
+                    <br>
+                    <li><a href="#">Legal disclaimers</a></li>
+                    <br>
+                </ul>
+            </div>
+            <div class="legal">
+                <h3>Jewelry Guide</h3>
+                <hr>
+                <br>
+                <ul>
+                    <li><a href="#">Buying and pricing</a></li>
+                    <br>
+                    <li><a href="#">jewellery care</a></li>
+                    <br>
+                    <li><a href="#">Gifting</a></li>
+                    <br>
+                    <li><a href="#">Diamond and solitaire </a></li>
+                    <br>
+                </ul>
+            </div>
+            <div class="legal">
+                <h3>Stores near you</h3>
+                <hr>
+                <br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1911.6415076903252!2d80.914188338635!3d16.61255939603711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a360faad234d671%3A0x79d8574f804e4e8a!2sVeeravalli%20Police%20Station!5e0!3m2!1sen!2sin!4v1711808093500!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="newsletter-signup">
+            <h3>Newsletter Signup</h3>
+            <br>
+            <form>
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </footer>
+    <hr>
+    <footer class="copyright">
+        <p>&copy; 2024 Lilac jewellers, All rights reserved.</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
